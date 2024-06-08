@@ -25,15 +25,15 @@ public class CatCodigoPostalDomConverter {
 
       if (completeConversion) {
          CatTipoAsentamientoDom catTipoAsentamientoDom = catCodigoPostalDom.getCatTipoAsentamientoDom();
-         catCodigoPostalDomView.set_descripcionAsentamiento((catTipoAsentamientoDom == null) ? "No existe" : catTipoAsentamientoDom.getDescripcionAsentamiento());
+         catCodigoPostalDomView.setDescripcionAsentamiento((catTipoAsentamientoDom == null) ? "No existe" : catTipoAsentamientoDom.getDescripcionAsentamiento());
          catCodigoPostalDomView.setCatTipoAsentamientoId((catTipoAsentamientoDom == null) ? -1 :catTipoAsentamientoDom.getIdCatTipoAsentamiento());
 
          CatMunicipiosDom catMunicipiosDom = catCodigoPostalDom.getCatMunicipiosDom();
-         catCodigoPostalDomView.set_descripcionMunicipios((catMunicipiosDom == null) ? "No existe" : catMunicipiosDom.getDescripcionMunicipios());
+         catCodigoPostalDomView.setDescripcionMunicipios((catMunicipiosDom == null) ? "No existe" : catMunicipiosDom.getDescripcionMunicipios());
          catCodigoPostalDomView.setCatMunicipiosId((catMunicipiosDom == null) ? -1 : catMunicipiosDom.getIdCatMunicipios());
 
          CatEntidadesDom catEntidadesDom = catCodigoPostalDom.getCatEntidadesDom();
-         catCodigoPostalDomView.set_descripcionEntidades((catEntidadesDom == null) ? "No existe" : catEntidadesDom.getDescripcionEntidades());
+         catCodigoPostalDomView.setDescripcionEntidades((catEntidadesDom == null) ? "No existe" : catEntidadesDom.getDescripcionEntidades());
          catCodigoPostalDomView.setCatEntidadesId((catEntidadesDom == null) ? -1 : catEntidadesDom.getIdCatEntidades());
       }
 
