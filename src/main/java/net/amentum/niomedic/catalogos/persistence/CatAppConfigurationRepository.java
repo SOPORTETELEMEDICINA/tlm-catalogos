@@ -10,6 +10,7 @@ import javax.validation.constraints.NotNull;
 @Repository
 public interface CatAppConfigurationRepository extends JpaRepository<CatAppConfiguration, Long>, JpaSpecificationExecutor {
 
-    CatAppConfiguration findByidCliente(@NotNull Integer idCliente);
+//    CatAppConfiguration findByidCliente(@NotNull Integer idCliente);
+    CatAppConfiguration getConfigByCliente(@NotNull String cliente);
 
 }
