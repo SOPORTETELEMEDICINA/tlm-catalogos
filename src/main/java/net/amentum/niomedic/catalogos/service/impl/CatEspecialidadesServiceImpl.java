@@ -55,6 +55,12 @@ public class CatEspecialidadesServiceImpl implements CatEspecialidadesService {
       this.catEspecialidadesConverter = catEspecialidadesConverter;
    }
 
+   @Override
+   public List<CatEspecialidades> getAllActiveEspecialidades() {
+      // Llama al nuevo metodo que solo devuelve las especialidades activas
+      return catEspecialidadesRepository.findAllActive();
+   }
+
    private CatEspecialidades exists(Integer idCatEspecialidades) throws CatEspecialidadesException {
       log.info("===>>>exists() - revisando si existe el motivo envio por id: {}", idCatEspecialidades);
       if (!catEspecialidadesRepository.exists(idCatEspecialidades)) {
